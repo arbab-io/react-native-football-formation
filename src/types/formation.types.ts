@@ -14,7 +14,7 @@ export type PlayerStatType =
   | 'ownGoals';
 
 export interface PlayerStats {
-  type: PlayerStatType;
+  type: string; // Accepts any string, but PlayerStatType provides supported values
   value: string | number;
 }
 

@@ -12,7 +12,8 @@
     "dist",
     "src",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "formation-demo.png"
   ],
   "scripts": {
     "build": "tsc && npm run copy-assets",

@@ -6,6 +6,12 @@ A highly customizable React Native component for displaying football/soccer team
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Demo
+
+<p align="center">
+  <img src="formation-demo.png" alt="Football Formation Demo" width="400" />
+</p>
+
 ## Features
 
 ✅ **24 Supported Formations** - All major tactical formations (4-3-3, 4-2-3-1, 3-5-2, etc.)

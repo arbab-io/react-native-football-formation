@@ -143,6 +143,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
                   <View
                     style={[
                       I18nManager.isRTL ? { paddingRight: 2 } : { paddingLeft: 2 },
+                      {justifyContent: 'center'}
                     ]}>
                     <Text
                       style={[
