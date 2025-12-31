@@ -1,6 +1,6 @@
 {
   "name": "react-native-football-formation",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A highly customizable React Native component for displaying football/soccer team formations with player positions and match statistics",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
