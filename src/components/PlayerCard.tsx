@@ -327,7 +327,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
           styles.playerName,
           {
             fontSize: theme.typography.playerNameSize,
-            color: theme.colors.text,
+            color: theme.colors.playerName,
             fontFamily: theme.typography.fontFamily,
           },
           nameStyle,
@@ -403,7 +403,6 @@ const styles = StyleSheet.create({
   },
   goalsText: {
     includeFontPadding: false,
-    lineHeight: 13.8,
   },
   footballIcon: {},
   yellowCardWrapper: {

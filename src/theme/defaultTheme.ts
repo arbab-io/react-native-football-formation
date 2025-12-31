@@ -10,6 +10,7 @@ export const defaultTheme: FormationTheme = {
     blue: '#2194FF',
     white: '#ffffff',
     text: '#13151F',
+    playerName: '#ffffff',
     border: '#96CBCB',
     warning: '#FFA500',
     success: '#34C759',

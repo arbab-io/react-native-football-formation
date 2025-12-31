@@ -7,6 +7,7 @@ export interface FormationThemeColors {
   blue: string;
   white: string;
   text: string;
+  playerName: string;
   border: string;
   warning: string;
   success: string;

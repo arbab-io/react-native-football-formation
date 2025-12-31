@@ -146,6 +146,7 @@ const teamLineup = {
   theme={{
     colors: {
       primary: '#FF0000',
+      playerName: '#FFFFFF',
       success: '#00FF00',
       warning: '#FFAA00',
     },
@@ -241,6 +242,7 @@ interface FormationTheme {
     blue: string;
     white: string;
     text: string;
+    playerName: string;
     border: string;
     warning: string;
     success: string;
