@@ -6,6 +6,10 @@ A highly customizable React Native component for displaying football/soccer team
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Status
+
+> **Note:** This package is currently in active development and is provided for testing and evaluation purposes only. The API is subject to change and stability is not guaranteed. It is not recommended for use in production environments at this time.
+
 ## Demo
 
 <p align="center">
