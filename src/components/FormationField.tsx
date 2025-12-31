@@ -44,11 +44,12 @@ const FormationField: React.FC<FormationFieldProps> = ({
   const lineupTransformed = useMemo(() => {
     if (!lineup) return [];
 
-    const formation = lineup?.formationUsed?.split('').join('-') || '4-3-3';
-    return transformLineupByFormationPlace(lineup, formation, getPlayerPhotoUrl);
+    // Normalize formation: remove dashes then add them back properly
+    const normalizedFormation = lineup?.formationUsed?.replace(/-/g, '').split('').join('-') || '4-3-3';
+    return transformLineupByFormationPlace(lineup, normalizedFormation, getPlayerPhotoUrl);
   }, [lineup, getPlayerPhotoUrl]);
 
-  const formationDisplay = lineup?.formationUsed?.split('').join('-') || '4-3-3';
+  const formationDisplay = lineup?.formationUsed?.replace(/-/g, '').split('').join('-') || '4-3-3';
 
   return (
     <ImageBackground

@@ -2,8 +2,19 @@
  * Type definitions for React Native Football Formation component
  */
 
+/**
+ * Supported player statistics types
+ */
+export type PlayerStatType =
+  | 'goals'
+  | 'yellowCard'
+  | 'redCard'
+  | 'goalAssist'
+  | 'totalSubOff'
+  | 'ownGoals';
+
 export interface PlayerStats {
-  type: string;
+  type: PlayerStatType;
   value: string | number;
 }
 
@@ -16,7 +27,7 @@ export interface Player {
   positionSide?: string;
   formationPosition?: string;
   formationPlace?: string;
-  stats: PlayerStats[] | null[];
+  stats: (PlayerStats | null)[]; // Array can contain PlayerStats objects or null values
 }
 
 export interface TeamLineup {

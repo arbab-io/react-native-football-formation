@@ -81,6 +81,63 @@ export default function FormationScreen() {
 }
 ```
 
+### Complete Player Object Example
+
+Here's a complete player object showing all available fields and stats:
+
+```tsx
+const teamLineup = {
+  players: [
+    // Example 1: Player with all stats
+    {
+      playerId: "5il4uc7d941ndwjl0qu97y7dh",
+      matchName: "Marcelo Grohe",
+      shirtNumber: 43,
+      rating: "7.2",
+      position: "Goalkeeper",
+      positionSide: "Centre",
+      formationPlace: "1",
+      stats: [
+        { type: "totalSubOff", value: "1" },
+        { type: "goals", value: 1 },
+        { type: "yellowCard", value: "1" },
+        { type: "redCard", value: "1" },
+        { type: "goalAssist", value: "0" },
+        { type: "ownGoals", value: "1" }
+      ]
+    },
+    // Example 2: Player with stats array containing null values
+    {
+      playerId: "abc123",
+      matchName: "Lionel Messi",
+      shirtNumber: 10,
+      rating: "9.5",
+      position: "Forward",
+      positionSide: "Right",
+      formationPlace: "10",
+      stats: [
+        { type: "goals", value: 2 },
+        null,
+        { type: "goalAssist", value: "1" },
+        null,
+        { type: "yellowCard", value: "0" }
+      ]
+    },
+    // ... 9 more players with formationPlace "2" to "9", "11"
+  ],
+  formationUsed: "433" // or "4-3-3"
+};
+
+<FormationField
+  lineup={teamLineup}
+  getPlayerPhotoUrl={(playerId) =>
+    `https://example.com/players/${playerId}.png`
+  }
+/>
+```
+
+**Note:** The `stats` array can contain both `PlayerStats` objects and `null` values. Null values are safely ignored.
+
 ### With Custom Theme
 
 ```tsx
@@ -166,11 +223,11 @@ interface Player {
   matchName: string;
   shirtNumber: number;
   formationPlace?: string; // "1" to "11"
-  stats: PlayerStats[] | null[];
+  stats: (PlayerStats | null)[]; // Array can contain PlayerStats objects or null values
 }
 
 interface PlayerStats {
-  type: string; // "goals", "yellowCard", "redCard", "goalAssist", etc.
+  type: 'goals' | 'yellowCard' | 'redCard' | 'goalAssist' | 'totalSubOff' | 'ownGoals';
   value: string | number;
 }
 ```
@@ -322,26 +379,46 @@ The component supports 24 different tactical formations:
 
 ## Player Statistics
 
-The component automatically displays player statistics when available:
+The component automatically displays player statistics when available. The `stats` array can contain `PlayerStats` objects or `null` values.
 
-- ⚽ **Goals** - Football icon with count
-- 👟 **Assists** - Kicker icon
-- 🟨 **Yellow Card** - Yellow card indicator
-- 🟥 **Red Card** - Red card indicator
-- 🔄 **Substitution** - Substitution icon
-- ⚽🔴 **Own Goals** - Own goal icon with count
+### Supported Stat Types
 
-Statistics are extracted from the `stats` array in the player data:
+| Stat Type | Display | Description |
+|-----------|---------|-------------|
+| `goals` | ⚽ Football icon + count | Number of goals scored |
+| `goalAssist` | 👟 Kicker icon | Number of assists provided |
+| `yellowCard` | 🟨 Yellow card | Yellow card received |
+| `redCard` | 🟥 Red card | Red card received |
+| `totalSubOff` | 🔄 Substitution icon | Player was substituted off |
+| `ownGoals` | ⚽🔴 Own goal icon + count | Number of own goals |
+
+### Example Player Stats
+
+The `stats` array can contain both stat objects and `null` values:
 
 ```typescript
 {
+  playerId: '1',
+  matchName: 'Cristiano Ronaldo',
+  shirtNumber: 7,
+  formationPlace: '9',
   stats: [
-    { type: 'goals', value: '2' },
-    { type: 'yellowCard', value: '1' },
-    { type: 'goalAssist', value: '1' },
+    { type: 'goals', value: 1 },           // Scored 1 goal
+    { type: 'yellowCard', value: '1' },   // Received yellow card
+    { type: 'goalAssist', value: '0' },   // No assists (won't display)
+    { type: 'redCard', value: '1' },      // Received red card
+    { type: 'totalSubOff', value: '1' },  // Was substituted
+    { type: 'ownGoals', value: '1' },     // Scored own goal
+    null,                                  // Null values are safely handled
   ]
 }
 ```
+
+**Note:**
+- Values can be either `string` or `number` types
+- Stats with a value of `'0'` or `0` won't be displayed
+- The `stats` array safely handles `null` entries
+- If `stats` is empty or all values are `null`, no stats will be displayed
 
 ## Utilities
 
@@ -380,6 +457,8 @@ The package is written in TypeScript and includes full type definitions. Import 
 import type {
   TeamLineup,
   Player,
+  PlayerStats,
+  PlayerStatType,
   LineupFormationPlayer,
   FormationTheme,
   FormationFieldProps,
