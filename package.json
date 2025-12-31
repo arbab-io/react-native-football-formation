@@ -1,9 +1,13 @@
 {
-  "name": "react-native-football-formation",
-  "version": "1.0.0",
+  "name": "@arbab-io/react-native-football-formation",
+  "version": "1.0.2",
   "description": "A highly customizable React Native component for displaying football/soccer team formations with player positions and match statistics",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "files": [
     "dist",
     "src",
@@ -51,10 +55,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arbabr96/react-native-football-formation"
+    "url": "https://github.com/arbab-io/react-native-football-formation"
   },
   "bugs": {
-    "url": "https://github.com/arbabr96/react-native-football-formation/issues"
+    "url": "https://github.com/arbab-io/react-native-football-formation/issues"
   },
-  "homepage": "https://github.com/arbabr96/react-native-football-formation#readme"
+  "homepage": "https://github.com/arbab-io/react-native-football-formation#readme"
 }
