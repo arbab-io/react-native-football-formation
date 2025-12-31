@@ -15,7 +15,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "mkdir -p dist/assets/images && cp -r src/assets/images/* dist/assets/images/",
     "prepare": "npm run build",
     "test": "jest",
     "lint": "eslint src/ --ext .ts,.tsx",
