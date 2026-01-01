@@ -2,9 +2,13 @@
 
 A highly customizable React Native component for displaying football/soccer team formations with player positions, stats, and match information.
 
+[![npm version](https://img.shields.io/npm/v/react-native-football-formation)](https://www.npmjs.com/package/react-native-football-formation)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-football-formation)](https://www.npmjs.com/package/react-native-football-formation)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-native-football-formation)](https://bundlephobia.com/package/react-native-football-formation)
 ![React Native](https://img.shields.io/badge/React%20Native-%3E%3D0.74.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![GitHub stars](https://img.shields.io/github/stars/arbab-io/react-native-football-formation?style=social)](https://github.com/arbab-io/react-native-football-formation)
 
 ## Status
 
@@ -13,8 +17,20 @@ A highly customizable React Native component for displaying football/soccer team
 ## Demo
 
 <p align="center">
-  <img src="formation-demo.png" alt="Football Formation Demo" width="400" />
+  <img src="https://raw.githubusercontent.com/arbab-io/react-native-football-formation/main/formation-demo.png" alt="Football Formation Demo" width="400" />
 </p>
+
+## Why This Package?
+
+Building football/soccer formation displays from scratch is time-consuming and complex. This package provides:
+
+- **Production-Ready**: Built for real-world sports apps, fantasy football platforms, and tactical analysis tools
+- **Zero Dependencies**: Lightweight with no external dependencies beyond React Native core
+- **Battle-Tested**: Supports all 24 major tactical formations used in professional football
+- **Developer-Friendly**: Extensive TypeScript support, comprehensive documentation, and intuitive API
+- **Fully Customizable**: Every visual aspect can be themed or completely overridden
+
+Perfect for sports apps, match analysis tools, fantasy football platforms, coaching applications, and tactical planning software.
 
 ## Features
 
@@ -520,18 +536,31 @@ See the `/examples` directory for complete working examples:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Support & Community
+
+- [GitHub Issues](https://github.com/arbab-io/react-native-football-formation/issues) - Report bugs or request features
+- [GitHub Discussions](https://github.com/arbab-io/react-native-football-formation/discussions) - Ask questions and share ideas
+- [Changelog](./CHANGELOG.md) - See what's new in each release
+
+If you find this package helpful, please consider giving it a star on GitHub!
+
+[![GitHub stars](https://img.shields.io/github/stars/arbab-io/react-native-football-formation?style=social)](https://github.com/arbab-io/react-native-football-formation)
+
 ## License
 
-MIT © Arbab Rafiq
+MIT © [Arbab Rafiq](https://github.com/arbab-io)
 
 ## Author
 
 **Arbab Rafiq**
+- GitHub: [@arbab-io](https://github.com/arbab-io)
+- Package: [react-native-football-formation](https://www.npmjs.com/package/react-native-football-formation)
 
 ## Acknowledgments
 
 - Inspired by modern football tactical analysis tools
 - Built for the React Native community
+- Thanks to all [contributors](https://github.com/arbab-io/react-native-football-formation/graphs/contributors)
 
 ---
 
