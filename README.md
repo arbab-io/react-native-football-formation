@@ -10,10 +10,6 @@ A highly customizable React Native component for displaying football/soccer team
 ![License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub stars](https://img.shields.io/github/stars/arbab-io/react-native-football-formation?style=social)](https://github.com/arbab-io/react-native-football-formation)
 
-## Status
-
-> **Note:** This package is currently in active development and is provided for testing and evaluation purposes only. The API is subject to change and stability is not guaranteed. It is not recommended for use in production environments at this time.
-
 ## Demo
 
 <p align="center">
